@@ -1,0 +1,24 @@
+name: Proxy Download
+on: [workflow_dispatch] # 手动触发
+
+env:
+  FILE_URL: "https://github.com/github/gitignore/blob/main/Android.gitignore" # 替换为实际资源地址
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      # 下载文件
+      - name: Download resource
+        run: |
+          curl -L -o target_file "${{ env.FILE_URL}}"
+          ls -lh target_file  # 显示文件大小
+        timeout-minutes: 30   # 超时保护
+
+      # 直传 Artifacts
+      - name: Upload to Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: downloaded-file
+          path: target_file      # 仅上传原始文件
+          retention-days: 2     # 保留2天（默认90天）
