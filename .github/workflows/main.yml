@@ -2,7 +2,7 @@ name: Proxy Download
 on: [workflow_dispatch] # 手动触发
 
 env:
-  FILE_URL: "https://store-na-phx-1.gofile.io/download/web/61efa8f7-fc84-43c0-a8ba-719144af3dbb/Sarah%20-%20Against%20Wall.mp4" # 替换为实际资源地址
+  FILE_URL: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png" # 替换为实际资源地址
 
 jobs:
   download:
