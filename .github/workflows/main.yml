@@ -2,7 +2,7 @@ name: Proxy Download
 on: [workflow_dispatch] # 手动触发
 
 env:
-  FILE_URL: "https://e-hentai.org/r/83c24d3624bfb44a06bf43243bad0fad20084d5a-45972-1280-907-wbp/forumtoken/2758154-9/007_4_2.webp" # 替换为实际资源地址
+  FILE_URL: "https://mfmmyzj.tvzlefsxadsv.hath.network:20001/h/1f8685788c58c87c312f905d299fde9e239fbd86-451680-1280-1807-wbp/keystamp=1754193900-bec7de69dd;fileindex=168502715;xres=1280/11.webp" # 替换为实际资源地址
 
 jobs:
   download:
